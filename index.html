@@ -4,6 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Voyages</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenue sur notre site de voyages</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos de nous</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>À propos de nous</h2>
+            <p>Nous sommes un groupe d'amis passionnés de voyages. Voici quelques-uns de nos meilleurs moments ensemble.
+            </p>
+        </section>
+        <section id="gallery">
+            <h2>Galerie</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/voyage1.jpg" alt="Voyage 1">
+                    <figcaption>Voyage à Paris</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/voyage2.jpg" alt="Voyage 2">
+                    <figcaption>Randonnée dans les Alpes</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/voyage3.jpg" alt="Voyage 3">
+                    <figcaption>Séjour à la plage</figcaption>
+                </figure>
+                <!-- Ajoutez d'autres figures ici -->
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <form id="contact-form">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Nos Voyages. Tous droits réservés.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -51,4 +117,4 @@
     <script src="js/script.js"></script>
 </body>
 
-</html>
+</html> -->

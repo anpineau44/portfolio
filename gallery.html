@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Nos Voyages</title>
+    <title>Galerie - Nos Voyages</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
@@ -14,14 +14,13 @@
 
 <body>
     <header class="bg-dark text-white text-center py-5">
-        <h1 class="animate__animated animate__fadeInDown">Bienvenue sur notre site de voyages</h1>
+        <h1 class="animate__animated animate__fadeInDown">Galerie</h1>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link hvr-underline-from-left" href="index.html">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link hvr-underline-from-left" href="about.html">À propos de
                             nous</a></li>
-                    <li class="nav-item"><a class="nav-link hvr-underline-from-left" href="gallery.html">Galerie</a>
-                    </li>
                     <li class="nav-item"><a class="nav-link hvr-underline-from-left" href="contact.html">Contact</a>
                     </li>
                 </ul>
@@ -29,9 +28,34 @@
         </nav>
     </header>
     <main class="container my-5">
-        <section id="home" data-aos="fade-up">
-            <h2 class="text-center">Accueil</h2>
-            <p class="text-center">Bienvenue sur notre site de voyages. Explorez nos aventures passionnantes.</p>
+        <section id="gallery" data-aos="fade-up">
+            <h2 class="text-center">Galerie</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <img src="images/voyage1.jpg" class="card-img-top" alt="Voyage à Paris">
+                        <div class="card-body">
+                            <p class="card-text">Voyage à Paris</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <img src="images/voyage2.jpg" class="card-img-top" alt="Voyage 2">
+                        <div class="card-body">
+                            <p class="card-text">Randonnée dans les Alpes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm" data-wow-duration="1s" data-wow-delay="0.6s">
+                        <img src="images/voyage3.jpg" class="card-img-top" alt="Voyage 3">
+                        <div class="card-body">
+                            <p class="card-text">Séjour à la plage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="bg-dark text-white text-center py-4">
@@ -47,7 +71,6 @@
     <script>
         AOS.init();
         new WOW().init();
-        gsap.from("header h1", { duration: 1, y: -100, opacity: 0, ease: "bounce" });
     </script>
 </body>
 

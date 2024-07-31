@@ -9,18 +9,24 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <!-- Hover.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header class="bg-dark text-white text-center py-5">
-        <h1>Bienvenue sur notre site de voyages</h1>
+        <h1 class="animate__animated animate__fadeInDown">Bienvenue sur notre site de voyages</h1>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">À propos de nous</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link hvr-underline-from-left" href="#about">À propos de nous</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link hvr-underline-from-left" href="#gallery">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link hvr-underline-from-left" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -31,19 +37,19 @@
             <p class="text-center">Nous sommes un groupe d'amis passionnés de voyages. Voici quelques-uns de nos
                 meilleurs moments ensemble.</p>
         </section>
-        <section id="gallery" class="my-5" data-aos="fade-up">
-            <h2 class="text-center">Galerie</h2>
+        <section id="gallery" class="my-5">
+            <h2 class="text-center" data-aos="fade-up">Galerie</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <img src="images/voyage1.jpg" class="card-img-top" alt="Voyage 1">
+                    <div class="card mb-4 shadow-sm" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <img src="images/voyage1.jpg" class="card-img-top" alt="Voyage à Paris">
                         <div class="card-body">
-                            <p class="card-text">Voyage à Paris</p>
+                            <p class="card-text">Voyage a Pornic</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
+                    <div class="card mb-4 shadow-sm" data-wow-duration="1s" data-wow-delay="0.4s">
                         <img src="images/voyage2.jpg" class="card-img-top" alt="Voyage 2">
                         <div class="card-body">
                             <p class="card-text">Randonnée dans les Alpes</p>
@@ -51,7 +57,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
+                    <div class="card mb-4 shadow-sm" data-wow-duration="1s" data-wow-delay="0.6s">
                         <img src="images/voyage3.jpg" class="card-img-top" alt="Voyage 3">
                         <div class="card-body">
                             <p class="card-text">Séjour à la plage</p>
@@ -87,66 +93,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="js/script.js"></script>
     <script>
         AOS.init();
+        new WOW().init();
+        // Example GSAP animation
+        gsap.from("header h1", { duration: 1, y: -100, opacity: 0, ease: "bounce" });
     </script>
 </body>
 
 </html>
-
-
-<!-- <!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <header>
-        <h1>Bienvenue sur mon Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h2>À propos de moi</h2>
-            <p>Je suis un développeur web passionné par la création de sites et d'applications web.</p>
-        </section>
-        <section id="projects">
-            <h2>Mes Projets</h2>
-            <ul>
-                <li>Projet 1: <a href="https://github.com/votreutilisateur/projet1">Lien vers le projet</a></li>
-                <li>Projet 2: <a href="https://github.com/votreutilisateur/projet2">Lien vers le projet</a></li>
-                <li>Projet 3: <a href="https://github.com/votreutilisateur/projet3">Lien vers le projet</a></li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contactez-moi</h2>
-            <form id="contact-form">
-                <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
-    </footer>
-    <script src="js/script.js"></script>
-</body>
-
-</html> -->

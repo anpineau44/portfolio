@@ -5,64 +5,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Voyages</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
+    <header class="bg-dark text-white text-center py-5">
         <h1>Bienvenue sur notre site de voyages</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">À propos de nous</a></li>
-                <li><a href="#gallery">Galerie</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos de nous</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main>
-        <section id="about">
-            <h2>À propos de nous</h2>
-            <p>Nous sommes un groupe d'amis passionnés de voyages. Voici quelques-uns de nos meilleurs moments ensemble.
-            </p>
+    <main class="container my-5">
+        <section id="about" data-aos="fade-up">
+            <h2 class="text-center">À propos de nous</h2>
+            <p class="text-center">Nous sommes un groupe d'amis passionnés de voyages. Voici quelques-uns de nos
+                meilleurs moments ensemble.</p>
         </section>
-        <section id="gallery">
-            <h2>Galerie</h2>
-            <div class="gallery">
-                <figure>
-                    <img src="images/voyage1.jpg" alt="Voyage 1">
-                    <figcaption>Voyage à Paris</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/voyage2.jpg" alt="Voyage 2">
-                    <figcaption>Randonnée dans les Alpes</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/voyage3.jpg" alt="Voyage 3">
-                    <figcaption>Séjour à la plage</figcaption>
-                </figure>
-                <!-- Ajoutez d'autres figures ici -->
+        <section id="gallery" class="my-5" data-aos="fade-up">
+            <h2 class="text-center">Galerie</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="images/voyage1.jpg" class="card-img-top" alt="Voyage 1">
+                        <div class="card-body">
+                            <p class="card-text">Voyage à Paris</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="images/voyage2.jpg" class="card-img-top" alt="Voyage 2">
+                        <div class="card-body">
+                            <p class="card-text">Randonnée dans les Alpes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="images/voyage3.jpg" class="card-img-top" alt="Voyage 3">
+                        <div class="card-body">
+                            <p class="card-text">Séjour à la plage</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="contact">
-            <h2>Contactez-nous</h2>
-            <form id="contact-form">
-                <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Envoyer</button>
+        <section id="contact" class="my-5" data-aos="fade-up">
+            <h2 class="text-center">Contactez-nous</h2>
+            <form id="contact-form" class="p-4 p-md-5 border rounded-3 bg-light">
+                <div class="form-group">
+                    <label for="name">Nom:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
             </form>
         </section>
     </main>
-    <footer>
+    <footer class="bg-dark text-white text-center py-4">
         <p>&copy; 2024 Nos Voyages. Tous droits réservés.</p>
     </footer>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
+
 
 <!-- <!DOCTYPE html>
 <html lang="fr">

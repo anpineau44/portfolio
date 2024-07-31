@@ -1,59 +1,30 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
 }
 
 header {
-    background: #333;
+    background: url('https://example.com/header-bg.jpg') no-repeat center center/cover;
+}
+
+nav .navbar-nav .nav-item .nav-link {
     color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 main {
-    padding: 1rem;
+    padding: 2rem 0;
 }
 
 section {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.card {
+    transition: transform 0.2s;
 }
 
-figure {
-    margin: 0;
-    flex: 1 1 calc(33% - 20px);
-    box-sizing: border-box;
-}
-
-figure img {
-    width: 100%;
-    height: auto;
+.card:hover {
+    transform: scale(1.05);
 }
 
 footer {
@@ -61,9 +32,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    bottom: 0;
-    width: 100%;
 }
+
 
 /* body {
     font-family: Arial, sans-serif;

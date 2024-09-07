@@ -71,3 +71,12 @@ footer {
 .hvr-underline-from-left:active:before {
     right: 0;
 }
+
+.card-img-top {
+    width: 100%;
+    /* Pour que l'image s'adapte à la largeur de son conteneur */
+    height: 400px;
+    /* Fixer la hauteur des images */
+    object-fit: cover;
+    /* Permet de conserver les proportions tout en remplissant l'espace */
+}
